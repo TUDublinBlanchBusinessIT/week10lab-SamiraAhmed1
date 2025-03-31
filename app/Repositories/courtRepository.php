@@ -2,27 +2,24 @@
 
 namespace App\Repositories;
 
-use App\Models\member;
+use App\Models\court;
 use App\Repositories\BaseRepository;
 
 /**
- * Class memberRepository
+ * Class courtRepository
  * @package App\Repositories
- * @version March 31, 2025, 3:38 pm UTC
+ * @version March 31, 2025, 3:40 pm UTC
 */
 
-class memberRepository extends BaseRepository
+class courtRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'bookingdate',
-        'starttime',
-        'endtime',
-        'memberid',
-        'courtid',
-        'fee'
+        'surface',
+        'floodlights',
+        'indoor'
     ];
 
     /**
@@ -40,6 +37,6 @@ class memberRepository extends BaseRepository
      **/
     public function model()
     {
-        return member::class;
+        return court::class;
     }
 }

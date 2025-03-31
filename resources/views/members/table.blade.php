@@ -1,18 +1,22 @@
 <table class="table table-responsive" id="members-table">
     <thead>
-        <th>Firstname</th>
-        <th>Surname</th>
-        <th>Membertype</th>
-        <th>Dateofbirth</th>
+        <th>Bookingdate</th>
+        <th>Starttime</th>
+        <th>Endtime</th>
+        <th>Memberid</th>
+        <th>Courtid</th>
+        <th>Fee</th>
         <th colspan="3">Action</th>
     </thead>
     <tbody>
     @foreach($members as $member)
         <tr>
-            <td>{!! $member->firstname !!}</td>
-            <td>{!! $member->surname !!}</td>
-            <td>{!! $member->membertype !!}</td>
-            <td>{!! $member->dateofbirth !!}</td>
+            <td>{!! $member->bookingdate !!}</td>
+            <td>{!! $member->starttime !!}</td>
+            <td>{!! $member->endtime !!}</td>
+            <td>{!! $member->memberid !!}</td>
+            <td>{!! $member->courtid !!}</td>
+            <td>{!! $member->fee !!}</td>
             <td>
                 {!! Form::open(['route' => ['members.destroy', $member->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

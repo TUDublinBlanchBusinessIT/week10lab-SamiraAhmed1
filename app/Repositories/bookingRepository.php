@@ -2,16 +2,16 @@
 
 namespace App\Repositories;
 
-use App\Models\member;
+use App\Models\booking;
 use App\Repositories\BaseRepository;
 
 /**
- * Class memberRepository
+ * Class bookingRepository
  * @package App\Repositories
- * @version March 31, 2025, 3:38 pm UTC
+ * @version March 31, 2025, 3:41 pm UTC
 */
 
-class memberRepository extends BaseRepository
+class bookingRepository extends BaseRepository
 {
     /**
      * @var array
@@ -40,6 +40,6 @@ class memberRepository extends BaseRepository
      **/
     public function model()
     {
-        return member::class;
+        return booking::class;
     }
 }

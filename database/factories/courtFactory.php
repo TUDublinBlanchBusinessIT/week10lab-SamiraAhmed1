@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\member;
+use App\Models\court;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class memberFactory extends Factory
+class courtFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = member::class;
+    protected $model = court::class;
 
     /**
      * Define the model's default state.
@@ -22,12 +22,9 @@ class memberFactory extends Factory
     public function definition()
     {
         return [
-            'bookingdate' => $this->faker->word,
-        'starttime' => $this->faker->word,
-        'endtime' => $this->faker->word,
-        'memberid' => $this->faker->randomDigitNotNull,
-        'courtid' => $this->faker->randomDigitNotNull,
-        'fee' => $this->faker->word,
+            'surface' => $this->faker->word,
+        'floodlights' => $this->faker->word,
+        'indoor' => $this->faker->word,
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s'),
         'deleted_at' => $this->faker->date('Y-m-d H:i:s')
