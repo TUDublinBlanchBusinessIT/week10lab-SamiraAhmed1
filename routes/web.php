@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 
 Route::resource('members', App\Http\Controllers\memberController::class);
+
+Route::get('/calendar/display', 'App\Http\Controllers\calendarController@display')->name('calendar.display');
